@@ -18,7 +18,8 @@ npm run build
 npm run build --report
 ```
 
-效果图
+[DEMO](http://chenliwen.tech/vueElementAdmin/#/login)
 
+效果图
 ![效果图](https://raw.githubusercontent.com/ch563/vueElementAdmin/master/demo.jpg)
 .

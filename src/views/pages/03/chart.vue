@@ -82,7 +82,7 @@
       timeLine: function(){
         let arr =[];
         for(let i=1; i<=24; i++){
-          arr.push(parseInt(i+":00"));
+          arr.push(parseInt(i)+":00");
         }
         return arr;
       },
