@@ -1,0 +1,345 @@
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+@import "screen-reader";
+//reset styles
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html,
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4f4f4f;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; //font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+ul,
+ol,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+hr,
+button,
+pre {
+  margin: 0;
+}
+
+body,
+label,
+button,
+input,
+select,
+option,
+textarea,
+fieldset,
+legend {
+  font: 12px/1.5 \5FAE\8F6F\96C5\9ED1, Arial, \5b8b\4f53, sans-self;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+em,
+i,
+th {
+  font-style: normal;
+  font-weight: 500;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+label,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+label,
+input,
+select {
+  vertical-align: middle;
+}
+
+input[type="text"],
+textarea,
+select {
+  // padding: 3px 4px;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+:focus {
+  outline: 0;
+}
+
+.el-input__inner {
+  &::-moz-placeholder {
+    color: #bbb;
+    font-size: 14px;
+  }
+  &::-webkit-input-placeholder {
+    color: #bbb;
+    font-size: 14px;
+  }
+  &:-ms-input-placeholder {
+    color: #bbb;
+    font-size: 14px;
+  }
+}
+
+a,
+button,
+input[type="button"],
+select {
+  cursor: pointer;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+a {
+  color: #6e9eff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover,
+a:active {
+  color: lighten(#6e9eff, 5%);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+iframe {
+  /* 修复ie6 7 8(q) iframe显示为行内表现的bug */
+  display: block;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  /* 解决FF下按钮文字不能垂直居中的问题 */
+  padding: 0;
+  border: 0;
+}
+
+.clear {
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+//错误页面
+.wrong-wrap {
+  padding: 100px 50px 50px;
+  text-align: center;
+  img {
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+}
+
+.el-loading-mask {
+  background: hsla(0, 0%, 100%, .5);
+}
+
+.el-submenu .el-menu {
+  background: none;
+}
+
+.el-submenu .el-menu-item:hover,
+.el-submenu__title:hover {
+  background: #f3f3f3;
+}
+
+.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active,
+.el-menu-item.is-active {
+  color: #1b84ed;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.el-menu-item,
+.el-submenu__title {
+  font-size: 12px;
+  height: 44px;
+  line-height: 44px;
+}
+
+.el-submenu.is-opened .el-submenu__title {
+  color: #1b84ed;
+  font-weight: 700;
+}
+
+.el-submenu__icon-arrow {
+  color: #ccc;
+}
+
+.el-submenu .el-menu-item {
+  height: 44px;
+  line-height: 44px;
+}
+
+.page-title {
+  padding: 15px 0 30px;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #464c5b;
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 29px;
+  }
+}
+
+.cont-title {
+  border-bottom: 2px solid #e3e8ee;
+  padding: 10px 0;
+  line-height: 29px;
+  margin-bottom: 20px;
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #5e6471;
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+
+.el-tooltip__popper.is-light {
+  border-color: #ccc;
+}
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+  border-bottom-color: #ccc;
+}
+
+.el-button {
+  i.fa {
+    margin-right: 5px;
+  }
+}
+
+.slide-enter-active,
+.slide-enter {
+  transition: all .3s ease
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0
+}
+
+.slide-enter {
+  transform: translateX(-3rem)
+}
+
+.slide-leave,
+.slide-leave-active {
+  transition: all .4s ease
+}
+
+.slide-leave-to {
+  transform: translateX(3rem)
+}
+
+
+@media (max-width: 950px) {
+  .el-dialog--small{
+    width:90%;
+  }
+}
+@media (max-width: 480px) {
+  .el-form-item {
+    margin-bottom: 20px;
+  }
+}
+.el-message-box{
+  max-width: 90%;
+}

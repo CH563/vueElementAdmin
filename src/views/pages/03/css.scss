@@ -1,0 +1,54 @@
+.col-width{
+  float:left;
+  width:220px;
+  max-width: 100%;
+}
+.col-float{
+  width:auto;
+}
+.col-sigle{
+  width:160px;
+  float: left;
+  padding-right: 15px;
+  max-width: 100%;
+}
+.title-tip{
+  display: inline-block;
+  height: 29px;
+  line-height: 32px;
+  color:#ccc;
+  font-size: 16px;
+  padding:0 12px;
+  cursor: pointer;
+}
+.tip-cont{
+  padding:5px;
+  color:#888;
+  font-size: 12px;
+  p{
+    margin-bottom: 8px;
+  }
+}
+.col-radio{
+  .el-radio-group{
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    display: block;
+    label{
+      margin-right: 20px;
+      @media (max-width:480px){
+        margin:0 0 10px;
+      }
+    }
+  }
+}
+.cont-scroll{
+  overflow-x: auto;
+  overflow-y: hidden;
+  width:100%;
+}
+.cont-chart{
+  padding:20px;
+  min-height: 400px;
+  min-width: 800px;
+}
